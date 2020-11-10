@@ -1,0 +1,101 @@
+/* ---------------- MAIN HEADINGS & LOGO -----------------*/
+.header {
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  position: relative; 
+    
+    &__logo-box {
+    position: absolute;
+    top: -15px;
+    left: 35px;
+    z-index: 110; 
+    }
+  
+    &__logo {
+    height: 145px; 
+    }
+  
+    &__main-textbox {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 110;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    }
+}
+/* ----------------- ABOUT and other general pages HEADER -----------------*/
+
+.header--2 {
+    text-align: center;
+    background-image: url(../content/home/about1.jpg);
+    background-size: cover;
+    height: 12rem;
+    width: auto;
+    display: block;
+}
+.about-us {
+    height: 29.4rem;
+    background-color: $color-bg-lightgrey-1;
+    display: block;
+    line-height: 40px;
+    padding: 3rem 5rem;
+    text-align: justify;
+    backface-visibility: hidden;
+}
+/* ----------------- CITIES HEADER -----------------*/
+.header--3 {
+    height: 18.5rem;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;    
+}
+.hub {
+    background-image: url(../content/Balochistan/HUB.jpg);
+}
+.gwadar {
+    background-image: url(../content/Balochistan/GWADAR.jpg);
+}
+.pasni {
+    background-image: url(../content/Balochistan/PASNI.jpg);
+}
+.bhit {
+    background-image: url(../content/Sindh/BHITSHAH.jpg);
+}
+.hyderabad {
+    background-image: url(../content/Sindh/HYDERABAD.jpg);
+}
+.faisalabad {
+    background-image: url(../content/Punjab/FAISALABAD.jpg);
+}
+.murree {
+    background-image: url(../content/Punjab/MUREE.jpg);
+}
+.chitral {
+    background-image: url(../content/KPK/CHITRAL.jpg);
+}
+.kohat {
+    background-image: url(../content/KPK/KOHAT.jpg);
+}
+.astore {
+    background-image: url(../content/GilgitBaltistan/ASTORE.jpg);
+}
+.chillas {
+    background-image: url(../content/GilgitBaltistan/CHILLAS.jpg);
+}
+/* ----------------- FOR UNDER CONSTRUCTION PAGES -----------------*/
+.notavailable {
+    height: 180px;
+    width: 450px;
+    border: 2px solid $color-primary-medium;
+    margin: 11rem auto 1rem auto;
+    border-radius: 10px;
+}
+.notavailable h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 40px;
+}

@@ -1,0 +1,52 @@
+/* GENERAL SETTINGS */
+.animated-line {
+    height: 0.1px;
+    background: $color-white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.animated-line-about::before,
+.animated-line-story::before,
+.animated-line-balochistan::before,
+.animated-line-kpk::before,
+.animated-line-sindh::before,
+.animated-line-punjab::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    background-image: url(../content/home/about1.jpg);
+    animation: animatedLine 5s linear infinite;
+    z-index: 1;
+}
+
+/* FOR ABOUT */
+.animated-line-about {
+    width: 15rem;
+}
+/*FOR TESTIMONIALS*/
+.animated-line-story {
+    width: 26.5rem;
+}
+/*FOR BALOCHISTAN*/
+.animated-line-balochistan {
+    width: 18rem;
+}
+/*FOR KHYBER PAKHTUNKHWA*/
+.animated-line-kpk {
+    width: 26.5rem;
+}
+/*FOR SINDH*/
+.animated-line-sindh {
+    width: 9rem;
+}
+/*FOR PUNJAB*/
+.animated-line-punjab {
+    width: 11rem;
+}

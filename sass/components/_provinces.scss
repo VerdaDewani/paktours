@@ -1,0 +1,147 @@
+.province {    
+
+    &__shape {
+        width: 10rem;
+        height: 10rem;
+        float: left;
+        position: absolute;
+
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-2rem) ;
+        
+        &-1 {
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        &-2 {
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        &-3 {
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        &-4 {
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        &-5 {
+            top: 50%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__image {
+        height: 100%;
+        transform: scale(1.4);
+        transition: all .5s;
+    }
+    
+    &__text {
+        position: absolute;
+        font-weight: 700;
+        font-size: 1rem;
+        
+        &--sindh {
+            top: 55%;
+            left: 15.5%;
+        }
+        &--punjab {
+            top: 83%;
+            left: 31%;
+        }
+        &--balochistan {
+            top: 55%;
+            left: 45.5%;
+        }
+        &--kpk {
+            top: 83%;
+            left: 65.5%;
+        }
+        &--kashmir {
+            top: 55%;
+            left: 77%;
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        cursor: pointer;
+    }
+    &:hover &__image {
+        transform: scale(1);
+        filter: blur(2.5px) brightness(80%);
+    }
+}
+
+.shape-outside-1,
+.shape-outside-2,
+.shape-outside-3, 
+.shape-outside-4,
+.shape-outside-5 {
+    height: 11.5rem;
+    width: 11.5rem;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s;
+
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) ;
+        
+    &:hover {
+        border: 40px solid $color-dark-grey-2;
+    }
+    
+    &:hover +p {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-25px);
+    }
+}
+.shape-outside-1 {
+    top: 30%;
+    left: 13%;
+}
+.shape-outside-2 {
+    top: 58%;
+    left: 29%;
+}
+.shape-outside-3 {
+    top: 30%;
+    left: 45%;
+}
+.shape-outside-4 {
+    top: 58%;
+    left: 62%;
+}
+.shape-outside-5 {
+    top: 30%;
+    left: 77%;  
+}

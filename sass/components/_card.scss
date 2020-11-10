@@ -1,0 +1,147 @@
+.card {
+    
+    //FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    
+    &__side {
+
+        &--front {
+            height: 26rem;
+            width: 18rem;
+            background-color: $color-white;
+            transition: transform .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            backface-visibility: hidden;
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+        }
+        &--back {
+            height: 26rem;
+            width: 18rem;
+            transform: rotateY(180deg);
+            transition: transform .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            backface-visibility: hidden;
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+            
+            &-1 {
+                background: linear-gradient(to right bottom, $color-light-yellow, $color-dark-yellow);
+            }
+            &-2 {
+                background: linear-gradient(to right bottom, $color-light-green, $color-dark-green);
+            }
+            &-3 {
+                background: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue);
+            }
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+    
+    //FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 11rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%); 
+        
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-light-yellow, $color-dark-yellow), url(https://secureservercdn.net/50.62.194.30/f5e.e3a.myftpupload.com/wp-content/uploads/2014/09/10647038_885709274787311_5517553254509344572_n.jpg?time=1600159606);
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-light-green, $color-dark-green), url(https://secureservercdn.net/50.62.194.30/f5e.e3a.myftpupload.com/wp-content/uploads/2014/09/10676171_889532271071678_4825469917077401322_n.jpg?time=1600159606);
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue), url(https://secureservercdn.net/50.62.194.30/f5e.e3a.myftpupload.com/wp-content/uploads/2014/09/10675605_860019494022956_8099565395105446593_n.jpg?time=1600159606);
+        }
+    }
+    
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 6rem;
+        right: 1rem;
+        text-align: right;
+        width: 75%;
+    }
+    
+    &__heading-span {
+        padding: .35rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-light-yellow, .85), 
+            rgba($color-dark-yellow, .85));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-light-green, .85), 
+            rgba($color-dark-green, .85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-light-blue, .85), 
+            rgba($color-dark-blue, .85));
+        }
+    }
+    
+    &__details {
+        padding: 1rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            
+            li {
+                text-align: center;
+                font-size: 1rem;
+                padding: 0.3rem;
+                
+                &:not(:last-child) {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+        //BACK SIDE STYLING    
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 2.5rem;
+    }
+    &__price-only {
+        font-size: 1.15rem;
+    }
+    &__price-value {
+        font-size: 2.8rem;
+        font-weight: 100;
+    }
+}

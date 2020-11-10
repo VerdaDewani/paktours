@@ -1,0 +1,114 @@
+/* -------------- DESIGNING NAVIGATION BACKGROUND AND LIST -------------- */
+
+.navigation {
+    
+    &__list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        opacity: 0;
+        width: 0;
+        transition: all .3s;
+        z-index: 140;
+        transition: all .3s cubic-bezier(0, 1.27, 1, 1.12);
+    }
+    &__back {
+        background-image: radial-gradient(rgba($color-primary-light-2, 1), rgba($color-primary-dark-3, 1));
+        background-size: cover;
+        height: 100vh;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        z-index: 120;
+        position: fixed;
+        top: 3.5rem;
+        right: 3.7rem;
+        transition: all .7s;
+    }
+}
+/* -------------- DESIGNING NAVIGAION BUTTON -------------- */
+.check {
+    position: fixed;
+    top: 3.2rem;
+    right: 3.5rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    text-align: center;
+    z-index: 150;
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgba($color-black, .3);
+    border: none;
+}
+.check:focus {
+    outline: none;
+}
+/* -------------- DESIGNING LINES INSIDE NAVIGAION BUTTON -------------- */
+.line {
+    position: absolute;
+    top: 1rem;
+    right: 0.65rem;
+    height: 0.25rem;
+    width: 1.9rem;
+    background-color: $color-grey;
+    border-radius: 8px;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+.top {
+    top: 27.5%;
+}
+.middle {
+    top: 47%;
+}
+.bottom {
+    top: 67%;
+}
+.check:hover .top{
+    top: 26%;
+}
+.check:hover .bottom{
+    top: 68%;
+}
+.icon.close .top {
+    transform: rotate(135deg);
+    top: 47%;
+}
+.icon.close .middle, .icon.close .bottom {
+    transform: rotate(-135deg);
+    top: 47%;
+}
+
+/* -------------- DESIGNING NAVIGAION LIST ELEMENTS -------------- */
+.nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1500;
+}
+.nav li {
+    padding: 10px;
+    list-style: none;
+    margin: 12px;
+}
+.nav li a {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-image: linear-gradient(90deg, transparent 50%, transparent 50%, $color-white 50%);
+    background-size: 200%;
+    transition: all .2s;
+}
+nav li a:hover {
+    background-position: 100%;
+    color: $color-dark-grey-2;
+    font-weight: 400;
+}
